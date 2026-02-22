@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WeChat Presentation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===== INTRO ===== -->
+
+<div class="intro-container">
+<div class="intro-content">
+<div class="wechat-logo">💬</div>
+<div class="intro-title">WeChat </div>
+</div>
+</div>
+
+<h1>WeChat </h1>
+
+<!-- ===== PROJECT PLAN ===== -->
+
+<section class="plan-section">
+<h2>Project Plan</h2>
+
+<div class="plan-container">
+
+<div class="plan-item">History<br>WeChat</div>
+<div class="plan-line"></div>
+
+<div class="plan-item">Special<br>Features</div>
+<div class="plan-line"></div>
+
+
+
+<div class="plan-item">Target<br>Audience</div>
+<div class="plan-line"></div>
+
+<div class="plan-item">Business<br>Field</div>
+
+  <div class="section-image">
+      <img src="pic3.jpeg" alt="WeChat History">
+  </div>
+</div>
+</section>
+
+<!-- ===== HISTORY ===== -->
+
+<section> <h2>History of WeChat :</h2> <p> - <span class="key">launcher :</span> Tencent Company, one of China’s biggest tech companies. <br> - <span class="key">developer :</span> Allen Zhang and his team. <br> - <span class="key">Date of launch :</span> launched in 2011 by Tencent <br> - <span class="key">The main reason behind creating WeChat :</span> was to adapt to the mobile internet era. </p> <p> In 2010–2011, smartphones were becoming very popular, especially after the rise of apps like WhatsApp. At that time, Tencent was dominant in desktop messaging with QQ, but they were worried about losing users on mobile. </p>
+    <p> So Allen Zhang and his small team built WeChat as a mobile-first messaging app. The initial goals were: <br>📱 Create a simple smartphone messaging app <br>🌍 Compete with WhatsApp internationally <br>🚀 Protect Tencent’s position in the messaging market </p>
+</section>
+
+<!-- ===== SPECIAL FEATURES ===== -->
+
+<section> <h2>Special features of WeChat :</h2>
+     <p> WeChat is known as a "super app" as It combines: </p> 
+     <p> -<span class="key">Communication :</span> 
+        texting, calling, sending voice messages. <br> -
+        <span class="key">Social media :</span> sharing posts on moments, pictures, short reels.. <br> 
+        -<span class="key">Payments :</span>
+         using WeChat pay, users are able to pay bills, shop, transfer money and send digital red envelopes during holidays. <br> 
+         -<span class="key">Everyday services :</span> 
+         Mini Programs allow users to order food, book taxis, play games, or access government services without downloading new apps. </p> 
+ </section>
+ <section class="featured">
+
+<h2>What is WeChat</h2>
+
+<div class="section-image">
+    <img src="pic1.jpeg" alt="WeChat" />
+</div>
+
+</section>
+
+<!-- ===== VIDEO ===== -->
+
+<section>
+<h2>Video Presentation</h2>
+
+<div class="video-container">
+<video controls>
+<source src="wechat.mp4" type="video/mp4">
+</video>
+</div>
+</section>
+
+<!-- ===== TARGET AUDIENCE ===== -->
+
+<section> <h2>Target audience :</h2> <p> WeChat does not focus on just one age group — it targets almost all age ranges in China. <br>_ Young adults (18–30) use it for messaging, social sharing (Moments), shopping, and payments. <br>_Working professionals (25–50) use it heavily for business communication, networking, and financial transactions. <br>_Older adults (50+) use it for staying in touch with family, reading news, and making simple mobile payments. </p> <p> Because it was deeply integrated into daily life, it became a cross-generational platform. In China, it is common to see teenagers, parents, and grandparents all using WeChat. </p> </section>
+
+<!-- ===== BUSINESS FIELD ===== -->
+
+<section > <h2>Wechat in business field :</h2></h2> <p> WeChat is extremely beneficial in the business field because it combines marketing, communication, sales, and payments in one platform. </p> <p> <span class="key">>Marketing & Communication</span> </p> <p> Through Official Accounts, companies can:<br> -Publish articles<br> -Promote products<br> -Send updates<br> -Communicate directly with customers as It works like a website, newsletter, and social media page combined. </p> <p> <span class="key">>Sales & Payments</span><br> Businesses can receive instant payments using WeChat Pay through QR codes. Transactions are fast and cashless. </p>
+    
+<p> Companies can create Mini Program stores without customers downloading separate apps. </p> 
+<p> <span class="key">>Large Market Access</span> </p> 
+<p> Developed by Tencent, WeChat gives access to over a billion users, creating a massive digital marketplace. Compared to platforms like Facebook or WhatsApp, WeChat offers a more integrated system where:<br> - Advertising<br> -Customer engagement<br> -E-commerce<br> -Payment systems all operate within one application. </p> 
+
+  
+<div class="section-image">
+<img src="pic2.jpeg">
+</div>
+</section>
+<section class="end-section">
+
+<h2 class="end-title">✨ The End</h2>
+
+<p class="end-text">
+Thank you for your attention
+</p>
+
+<div class="end-line"></div>
+
+<p class="creator">
+Created by Mariem Zghal
+</p>
+
+</section>
+<script>
+
+/* Scroll Reveal */
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+},{threshold:0.2});
+
+document.querySelectorAll("section").forEach(sec=>{
+observer.observe(sec);
+});
+
+</script>
+
+</body>
+</html>

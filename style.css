@@ -1,0 +1,360 @@
+/* ===== GLOBAL ===== */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#7ed957,#a8e063,#56ab2f);
+    color:#1e2a1e;
+}
+
+/* ===== INTRO ===== */
+
+.intro-container{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#7ed957,#a8e063);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+
+    animation:introFade 4s ease forwards;
+}
+
+.intro-content{
+    text-align:center;
+    animation:introZoom 2.5s ease;
+}
+
+.wechat-logo{
+    font-size:100px;
+    animation:logoFloat 2s ease-in-out infinite;
+}
+
+.intro-title{
+    font-family:'Playfair Display',serif;
+    font-size:50px;
+    color:white;
+    margin-top:20px;
+}
+
+/* ===== SECTION ===== */
+
+section{
+    width:85%;
+    margin:80px auto;
+    padding:50px;
+
+    background:rgba(255,255,255,0.9);
+    border-radius:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 1s ease;
+}
+
+section.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+section:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+/* ===== TITLES ===== */
+
+h1{
+    text-align:center;
+    font-size:60px;
+    margin-top:60px;
+    font-family:'Playfair Display',serif;
+
+    background:linear-gradient(90deg,#2e7d32,#ffffff,#2e7d32);
+    background-size:200%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 4s linear infinite;
+}
+
+h2{
+    font-size:36px;
+    color:#2e7d32;
+    font-family:'Playfair Display',serif;
+}
+
+/* ===== KEYWORDS ===== */
+
+.key{
+    color:#1b5e20;
+    font-weight:800;
+    font-size:22px;
+}
+
+/* ===== PROJECT PLAN BACKGROUND ===== */
+
+.plan-container{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;   /* ⭐ THIS CENTERS THE LINE */
+    flex-wrap:nowrap;
+    gap:30px;
+    padding:40px 0;
+}
+
+.plan-item{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+
+    background:linear-gradient(145deg,#a8e063,#56ab2f);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    font-weight:bold;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+.plan-line{
+    width:60px;
+    height:4px;
+
+    background:#2e7d32;
+
+    align-self:center;   /* ⭐ VERY IMPORTANT */
+}
+
+/* ===== VIDEO REEL ===== */
+
+.video-container{
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
+}
+
+.video-container video{
+    width:320px;
+    height:560px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+.video-container{
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
+}
+
+.video-container video{
+    width:320px;
+    height:560px;
+    object-fit:cover;
+
+    border:6px solid #2e7d32;
+    border-radius:25px;
+
+    padding:5px;
+
+    box-shadow:
+    0 0 20px rgba(46,125,50,0.3),
+    0 15px 40px rgba(0,0,0,0.3);
+
+    transition:0.4s ease;
+}
+
+.video-container video:hover{
+    transform:scale(1.03);
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes shine{
+    0%{background-position:0%}
+    100%{background-position:200%}
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+@keyframes introZoom{
+    from{
+        transform:scale(0.6);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes logoFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+}
+
+@keyframes introFade{
+    0%{opacity:1}
+    80%{opacity:1}
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+/* ===== SMOOTH SCROLL ===== */
+
+html{
+    scroll-behavior:smooth;
+}
+/* ===== SECTION WITH ONE IMAGE ===== */
+
+.content-section{
+    text-align:center;
+}
+
+/* Image container */
+.section-image{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+/* The framed image */
+.section-image img{
+    width:400px;
+    max-width:90%;
+    border-radius:25px;
+
+    /* Frame */
+    border:8px solid #2e7d32;
+    padding:8px;
+    background:white;
+
+    /* Shadow */
+    box-shadow:
+        0 0 25px rgba(46,125,50,0.4),
+        0 20px 50px rgba(0,0,0,0.25);
+
+    transition:0.4s ease;
+}
+
+/* Hover effect */
+.section-image img:hover{
+    transform:scale(1.05);
+}
+/* Featured section (for big image) */
+
+section.featured{
+    width:95%;
+    max-width:none;
+    padding:60px 20px;
+}
+
+/* Big featured image */
+
+.featured .section-image img{
+    width:800px;
+    max-width:95%;
+    height:auto;
+}
+/* ===== SIDE IMAGE SECTION ===== */
+
+.side-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+
+    width:85%;
+    margin:80px auto;
+
+    background:rgba(255,255,255,0.9);
+    border-radius:25px;
+    padding:50px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+
+    flex-wrap:wrap;
+}
+
+/* Text part */
+
+.section-text{
+    flex:1;
+    min-width:300px;
+}
+
+/* Image side */
+
+.section-image-side{
+    flex:0.6;
+    display:flex;
+    justify-content:center;
+}
+
+.section-image-side img{
+    width:300px;
+    max-width:100%;
+
+    border-radius:25px;
+
+    border:6px solid #2e7d32;
+    padding:6px;
+
+    box-shadow:
+    0 0 20px rgba(46,125,50,0.4),
+    0 20px 40px rgba(0,0,0,0.25);
+
+    transition:0.4s ease;
+}
+
+.section-image-side img:hover{
+    transform:scale(1.05);
+}
+/* ===== END SECTION ===== */
+
+.end-section{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.end-title{
+    font-family:'Playfair Display',serif;
+    color:#2e7d32;
+    font-size:50px;
+}
+
+.end-text{
+    font-size:28px;
+    margin-top:20px;
+}
+
+/* Thin signature line */
+
+.end-line{
+    width:250px;
+    height:2px;
+    background:#2e7d32;
+
+    margin:40px auto 20px auto;
+    opacity:0.6;
+}
+
+/* Creator name */
+
+.creator{
+    font-size:16px;
+    letter-spacing:2px;
+    color:#1b5e20;
+    opacity:0.8;
+}
